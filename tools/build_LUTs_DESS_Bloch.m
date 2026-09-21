@@ -29,7 +29,7 @@ else
 end
 
 
-T2s = [0.1:0.1:5 5.5:0.5:10 11:5:200];%[1 5 10 20 30 40 50:25:300];%[10:25:300];
+T2s = [0.1:0.1:5 5.5:0.5:10 11:5:300];
 TR = TRin;
 flip = alpha;
 TE = 0;
@@ -52,10 +52,10 @@ for ii=1:length(T1s)
     end
 end
 
-%T2ss = [10:25:300];%
+
 T2ss = [1:0.1:300];
 F0_Fi = interp1(T2s,F0_F,T2ss);F1_Fi = interp1(T2s,F1_F,T2ss);
-%F0_Fi = F0_F; F1_Fi = F1_F;
+
 
 LUTs_eta = zeros(length(T1s), length(T2ss));
 LUTs_theta = zeros(length(T1s), length(T2ss));
